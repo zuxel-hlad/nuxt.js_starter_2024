@@ -1,6 +1,6 @@
 ## Setup
 
-# you need to instal node.js
+# you need to install node.js
 
 download here: https://nodejs.org
 
