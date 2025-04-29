@@ -12,7 +12,6 @@
 </template>
 
 <script setup lang="ts">
-// Пропс для текста
 const { text = 'Your Promo text' } = defineProps<{ text: string }>()
 
 const textArray = computed<string[]>(() => text.split(''))
