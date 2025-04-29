@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Grtsk Giga';
+    src:
+        local('Grtsk Giga Semibold'),
+        local('GrtskGiga-Semibold'),
+        url('/Grtsk-Giga/GrtskGiga-Semibold.woff2') format('woff2'),
+        url('/Grtsk-Giga/GrtskGiga-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Grtsk Giga';
+    src:
+        local('Grtsk Giga Bold'),
+        local('GrtskGiga-Bold'),
+        url('/Grtsk-Giga/GrtskGiga-Bold.woff2') format('woff2'),
+        url('/Grtsk-Giga/GrtskGiga-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}

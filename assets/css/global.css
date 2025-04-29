@@ -1,9 +1,22 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-* {
-    scrollbar-width: thin;
+@theme {
+    --default-font-family: 'Grtsk Giga', sans-serif;
+    --color-light-grey: #bebebe;
+    --color-dark-grey: #373737;
+    --color-yellow: #ffcb46;
+    --breakpoint-extra-sm: 23.43rem;
+    --breakpoint-2xl: 90rem;
+    --animate-rotate-text: rotate-text 5s linear infinite;
+
+    @keyframes rotate-text {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(-360deg);
+        }
+    }
 }
 
 html,
@@ -14,27 +27,22 @@ body,
 }
 
 body {
-    font-family: 'IBM Plex Sans', sans-serif;
+    background-color: var(--color-light-grey);
 }
 
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+.slide-enter-active {
+    transition:
+        transform 0.5s linear,
+        opacity 0.5s linear,
+        background-color 0.7s ease-in;
 }
-
-/* Firefox */
-input[type='number'] {
-    -moz-appearance: textfield;
+.slide-enter-from {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-100%, 0) skew(15deg);
+    background-color: var(--color-dark-grey);
 }
-
-.v-enter-active,
-.v-leave-active {
-    transition: opacity 0.5s ease;
-}
-
-.v-enter-from,
-.v-leave-to {
-    opacity: 0;
+.slide-enter-to {
+    transform: translate(0%, 0) skew(0deg);
 }

@@ -1,3 +1,6 @@
 <template>
-    <slot />
+    <main-header />
+    <main class="overflow-hidden">
+        <slot />
+    </main>
 </template>
